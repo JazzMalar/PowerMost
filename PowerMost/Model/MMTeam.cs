@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Matternet
+namespace PowerMost.Model
 {
     public class MMTeam
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Management.Automation;
-using Matternet; 
+using PowerMost.APIWrapper;
 
 namespace PowerMost
 {

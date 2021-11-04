@@ -4,8 +4,9 @@ using System.Text;
 using RestSharp;
 using RestSharp.Validation;
 using System.IO;
+using PowerMost.Model;
 
-namespace Matternet
+namespace PowerMost.APIWrapper
 {
     public class MMApiWrapper
     {
@@ -50,7 +51,7 @@ namespace Matternet
             try
             {
                 GetChannelByNameAndTeam(channelname, teamname);
-            } catch (Exception e)
+            } catch 
             {
                 result = false;
             }

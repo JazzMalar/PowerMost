@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Management.Automation;
-using Matternet;
+using PowerMost.Model;
 
 namespace PowerMost
 {
