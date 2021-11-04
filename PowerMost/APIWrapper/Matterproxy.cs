@@ -4,8 +4,9 @@ using System.Text;
 
 using RestSharp;
 using RestSharp.Authenticators;
+using PowerMost.Model;
 
-namespace Matternet
+namespace PowerMost.APIWrapper
 {
     class Matterproxy
     {
@@ -40,6 +41,7 @@ namespace Matternet
         public Matterproxy(string baseurl, string accesstoken)
         {
             this.baseurl = baseurl;
+            this.username = string.Empty; 
             this.accesstoken = accesstoken;
             useSessionToken = false; 
         }
@@ -59,7 +61,7 @@ namespace Matternet
                 return false; 
             }
 
-            if (!res.Data.username.Equals(username, StringComparison.OrdinalIgnoreCase))
+            if (!String.IsNullOrEmpty(username) && !res.Data.username.Equals(username, StringComparison.OrdinalIgnoreCase))
             {
                 return false;
             }
