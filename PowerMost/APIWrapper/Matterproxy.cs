@@ -49,7 +49,7 @@ namespace PowerMost.APIWrapper
         private bool IsAuthenticated()
         {
             var client = new RestClient(baseurl);
-            var req = new RestRequest("users/me", Method.GET, DataFormat.Json);
+            var req = new RestRequest("users/me", Method.HEAD, DataFormat.Json);
 
             var token = useSessionToken ? sessiontoken : accesstoken;
             req.AddHeader("Authorization", string.Format("Bearer {0}", token));
