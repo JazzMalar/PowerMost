@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerMost", "PowerMost\PowerMost.csproj", "{622607B4-71BB-494A-B693-4B1BBD505247}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerMost", "PowerMost\PowerMost.csproj", "{622607B4-71BB-494A-B693-4B1BBD505247}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMost", "TestMost\TestMost.csproj", "{F08A736C-B07D-4449-B2E5-D8FCA6C445E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,14 @@ Global
 		{622607B4-71BB-494A-B693-4B1BBD505247}.Release|Any CPU.Build.0 = Release|Any CPU
 		{622607B4-71BB-494A-B693-4B1BBD505247}.Release|x64.ActiveCfg = Release|x64
 		{622607B4-71BB-494A-B693-4B1BBD505247}.Release|x64.Build.0 = Release|x64
+		{F08A736C-B07D-4449-B2E5-D8FCA6C445E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F08A736C-B07D-4449-B2E5-D8FCA6C445E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F08A736C-B07D-4449-B2E5-D8FCA6C445E4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F08A736C-B07D-4449-B2E5-D8FCA6C445E4}.Debug|x64.Build.0 = Debug|Any CPU
+		{F08A736C-B07D-4449-B2E5-D8FCA6C445E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F08A736C-B07D-4449-B2E5-D8FCA6C445E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F08A736C-B07D-4449-B2E5-D8FCA6C445E4}.Release|x64.ActiveCfg = Release|Any CPU
+		{F08A736C-B07D-4449-B2E5-D8FCA6C445E4}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

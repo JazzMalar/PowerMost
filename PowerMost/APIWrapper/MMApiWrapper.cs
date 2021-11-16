@@ -273,6 +273,50 @@ namespace PowerMost.APIWrapper
             return proxy.Execute<List<MMUser>>(request);
         }
 
+
+        public List<MMUser> GetUsers(bool listOnlyActive, bool listOnlyInactive)
+        {
+            var paging = true;
+            var page = 0;
+            List<MMUser> retVal = new List<MMUser>();
+
+            while (paging)
+            {
+                var request = new RestRequest("users", Method.GET);
+
+                if (listOnlyActive)
+                {
+                    request.AddParameter("active", true, ParameterType.QueryString); 
+                }
+                else if(listOnlyInactive)
+                {
+                    request.AddParameter("inactive", true, ParameterType.QueryString);
+                }
+
+                request.AddParameter("page", page, ParameterType.QueryString);
+                request.AddParameter("per_page", 200, ParameterType.QueryString);
+                var ret = proxy.Execute<List<MMUser>>(request);
+
+                if ((ret.Count == 1 && ret[0].email == null) || ret.Count == 0)
+                {
+                    paging = false;
+                }
+                else
+                {
+                    retVal.AddRange(ret);
+                    page++;
+                }
+            }
+
+            return retVal;
+
+        }
+
+        public List<MMUser> GetUsers()
+        {
+            return GetUsers(false, false);
+        }
+
         public MMChannel CreatePublicChannel(string teamname, string channelname, string displayname)
         {
             return CreateChannel(teamname, channelname, displayname, MMChannel.ChannelType.O); 

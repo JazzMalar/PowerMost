@@ -11,7 +11,7 @@ namespace PowerMost
         [Parameter(Mandatory = true)]
         public String BaseUrl { get; set; }
 
-        [Parameter(ParameterSetName="SessionToken", Mandatory = true)]
+        [Parameter(ParameterSetName = "SessionToken", Mandatory = true)]
         public String ApiUser { get; set; }
 
         [Parameter(ParameterSetName = "SessionToken", Mandatory = true)]
